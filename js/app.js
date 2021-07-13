@@ -7,7 +7,6 @@ let minOpj = [23, 3, 11, 20, 2];
 let maxOpj = [65, 24, 38, 38, 16];
 let avgOpj = [6.3, 1.2, 3.7, 2.3, 4.6];
 let locationOpj = [];
-
 // constructor function
 function Store(Locations, minOpj, maxOpj, avgOpj) {
     // Parameters
@@ -107,6 +106,10 @@ function tableBody() {
 
 }
 
+
+
+
+let totaloftotal=0;
 // Footer
 function tableEnd() {
     let storeRow = document.createElement('tr');
@@ -114,18 +117,28 @@ function tableEnd() {
     let tdTotDay = document.createElement('td');
     storeRow.appendChild(tdTotDay);
     tdTotDay.textContent = 'Total';
+   
+   
     for (let i = 0; i < time.length; i++) {
         let hourlyTot = 0;
         for (let x = 0; x < locationOpj.length; x++) {
             hourlyTot += locationOpj[x].cookiesNum[i];
+
+            totaloftotal +=locationOpj[x].cookiesNum[i];
+                  
+            
         }
         let tdTotDay = document.createElement('td');
         storeRow.appendChild(tdTotDay);
         tdTotDay.textContent = hourlyTot;
+    
     }
+    
     let totfin = document.createElement('td');
     storeRow.appendChild(totfin);
-    totfin.textContent = '';
+   
+    totfin.textContent = totaloftotal;
+   
 }
 
 // calling all functions
