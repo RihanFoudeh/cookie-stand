@@ -2,7 +2,7 @@
 
 // initials
 let time = ['6am ', '7am ', '8am ', '9am ', '10am ', '11am ', '12am ', '1pm ', '2pm ', '3pm ', '4pm ', '5pm ', '6pm ', '7pm '];
-let Locations = ['Seattle', 'Tokyo', 'Dubai', 'Paris', 'Lima'];
+let locations = ['Seattle', 'Tokyo', 'Dubai', 'Paris', 'Lima',];
 let minOpj = [23, 3, 11, 20, 2];
 let maxOpj = [65, 24, 38, 38, 16];
 let avgOpj = [6.3, 1.2, 3.7, 2.3, 4.6];
@@ -24,12 +24,13 @@ function Store(Locations, minOpj, maxOpj, avgOpj) {
 }
 
 
+
 // creat opj
-let Seattle = new Store(Locations[0], minOpj[0], maxOpj[0], avgOpj[0], 0);
-let Tokyo = new Store(Locations[1], minOpj[1], maxOpj[1], avgOpj[1], 0);
-let Dubai = new Store(Locations[2], minOpj[2], maxOpj[2], avgOpj[2], 0);
-let Paris = new Store(Locations[3], minOpj[3], maxOpj[3], avgOpj[3], 0);
-let Lima = new Store(Locations[4], minOpj[4], maxOpj[4], avgOpj[4], 0);
+let Seattle = new Store(locations[0], minOpj[0], maxOpj[0], avgOpj[0], 0);
+let Tokyo = new Store(locations[1], minOpj[1], maxOpj[1], avgOpj[1], 0);
+let Dubai = new Store(locations[2], minOpj[2], maxOpj[2], avgOpj[2], 0);
+let Paris = new Store(locations[3], minOpj[3], maxOpj[3], avgOpj[3], 0);
+let Lima = new Store(locations[4], minOpj[4], maxOpj[4], avgOpj[4], 0);
 
 
 // random number of customers each hour each store
@@ -81,7 +82,7 @@ function tableHeader() {
 
 // Body
 function tableBody() {
-    for (let i = 0; i < Locations.length; i++) {
+    for (let i = 0; i < locations.length; i++) {
         // creating
         let storeRow = document.createElement('tr');
         let td = document.createElement('td');
@@ -145,3 +146,63 @@ function tableEnd() {
 tableHeader();
 tableBody();
 tableEnd();
+
+
+
+
+//Form
+let form = document.getElementById('form');
+
+// Handele Event
+form.addEventListener('submit', createUserStore);
+
+
+
+
+function createUserStore(event) {
+    event.preventDefault();
+
+   
+    let LocationName = event.target.location.value;
+    let minCustomer =Number(event.target.minCustomer.value) ;
+    let maxCustomer =Number( event.target.maxCustomer.value);
+    let avgCustomer =Number( event.target.avgCustomer.value) ;
+
+    // //INSERTING user info
+    // 
+
+    // console.log(locationOpj.length);
+    // console.log(Locations.length);
+    // reset();
+    // console.log(userStore.Locations);
+    locations.push( LocationName);
+    minOpj.push(Number(minCustomer));
+    maxOpj.push(Number(maxCustomer));
+    avgOpj.push(Number(avgCustomer));
+   
+
+     
+    let userStore = new Store(LocationName, minCustomer, maxCustomer, avgCustomer);
+    reset()
+    userStore.RandomNumber()
+userStore.CookiesNumAvg()
+
+     console.log(LocationName);
+
+
+
+    // for (let i = 4; i < locationOpj.length; i++) {
+    //     //Rendering    
+   
+        tableHeader();
+        tableBody();
+        tableEnd();
+    // } 
+}
+
+//reset table
+function reset() {
+    reset
+    totaloftotal = 0;
+    table.textContent = '';
+}
