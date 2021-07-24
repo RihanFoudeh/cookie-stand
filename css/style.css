@@ -1,20 +1,187 @@
-main ul li {
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@700&display=swap');
 
-display: block;
-    padding: 20px;
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:ital@1&display=swap');
+@-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%{-webkit-transform:translateX(0px);transform:translateX(0px)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}100%{-webkit-transform:translateX(0px);transform:translateX(0px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%{transform:translateX(0px)}50%{transform:translateX(80px)}100%{transform:translateX(0px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}
+
+body{
+background-image: url(https://previews.123rf.com/images/tashka2000/tashka20001809/tashka2000180900118/108585349-cookies-pattern-on-the-yellow-background-top-view-of-chocolate-chip-cookies.jpg);
+background-attachment: fixed;
+
 }
-main ul li h1 {
+
+
+
+
+
+
+main section div {
+
+display: inline-block;
+    /* padding: 20px; */
+    margin: 30px;
+    padding: 30px;
+
+    text-transform: uppercase; 
+    text-decoration: underline; 
+    color: whitesmoke;
+    background-color:rgb(197, 216, 159);
+      width: 550px;
+      
+    margin-left: 250px;
+    opacity: 90%;
+    animation-name:  coloring;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+
+}
+main div h1 {
 font-size: 50px;
     padding-right: 40px;
+    text-align: center;
     }
 
 
-    main ul li img {
+    main div img {
 height: 500px;
 width: 500px;
 
+
     }
-    main ul li img:first-child{
+    main div img:first-child{
     height: 500px;
 width:1000px ;
+    }
+
+    header{
+        text-align: center;
+    }
+   header h1 {
+        font-family: 'Zilla Slab Highlight', cursive;
+        color: whitesmoke;
+        background-color: black;
+      width: 1000px;
+      
+margin-left: 450px;
+    }
+    
+     h1 {
+        /* font-family: 'Zilla Slab Highlight', cursive; */
+        font-size: 70px;
+    }
+    main div p  {
+        text-align: justify;
+        text-indent: 20px;
+     width: 500px;
+     font-family: 'Times New Roman', Times, serif;
+    }
+    main h2{
+        font-family: 'Amaranth', sans-serif;
+        /* color: red; */
+        width: 140px;
+        text-align: center;
+    }
+    main h1 {
+        font-family: 'Amaranth', sans-serif;
+        color: red;
+        width: 140px;
+        text-align: center;
+        margin-left: 150px;
+        opacity: 1000%;
+    animation-name:  coloring2;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    }
+    main div h3{
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+
+    @keyframes coloring {
+        10% {
+            background: linear-gradient(45deg, #08e9cb, #2196f3);
+        }
+        20% {
+            background: linear-gradient(45deg, #e64f0a, #0c0102);
+        }
+        30% {
+            background: linear-gradient(45deg, #383236, #b40cc3);
+        }
+        40% {
+            background: linear-gradient(45deg, #0de07e, #f30505);
+        }
+        60% {
+            background: linear-gradient(45deg, #b3f305, #dc07f0);
+        }
+        70% {
+            background: linear-gradient(45deg, #db06ad, #8d0c28);
+        }
+        80% {
+            background: linear-gradient(45deg, #48c0cf, #07fa1b);
+        }
+        90% {
+            background: linear-gradient(45deg, #140301, #3002fb);
+        }
+        95% {
+            background: linear-gradient(45deg, #140301, #3002fb);
+        }
+    }
+    
+  
+    @keyframes coloring2 {
+        10% {
+            background: linear-gradient(45deg, #08e9cb, #2196f3);
+        }
+        20% {
+            background: linear-gradient(45deg, #e64f0a, #0c0102);
+        }
+        30% {
+            background: linear-gradient(45deg, #383236, #b40cc3);
+        }
+        40% {
+            background: linear-gradient(45deg, #0de07e, #f30505);
+        }
+        60% {
+            background: linear-gradient(45deg, #b3f305, #dc07f0);
+        }
+        70% {
+            background: linear-gradient(45deg, #db06ad, #8d0c28);
+        }
+        80% {
+            background: linear-gradient(45deg, #48c0cf, #07fa1b);
+        }
+        90% {
+            background: linear-gradient(45deg, #140301, #3002fb);
+        }
+        95% {
+            background: linear-gradient(45deg, #140301, #3002fb);
+        }
+    }
+
+
+
+
+    .snowflake {
+        color: #fff;
+        font-size: 1em;
+        font-family: Arial;
+        text-shadow: 0 0 1px #000;
+      }
+    
+      @-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%{-webkit-transform:translateX(0px);transform:translateX(0px)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}100%{-webkit-transform:translateX(0px);transform:translateX(0px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%{transform:translateX(0px)}50%{transform:translateX(80px)}100%{transform:translateX(0px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}
+      /* Demo Purpose Only*/
+      .demo {
+        font-family: 'Raleway', sans-serif;
+          color:#fff;
+          display: block;
+          margin: 0 auto;
+          padding: 15px 0;
+          text-align: center;
+      }
+      .demo a{
+        font-family: 'Raleway', sans-serif;
+      color: #000;		
+      }
+    
+      .snowflake:hover{
+        display: none;
     }
